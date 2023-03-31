@@ -1,0 +1,83 @@
+Codelapan: to Infinity and Beyond with Codes
+Cara Membuat Animasi Mengetik Teks Dengan CSS dan Javascript
+Cara Membuat Animasi Mengetik Teks Dengan CSS dan Javascript
+Admin
+Admin・ 13 April 2021
+7 min read ・ 7708 views
+
+Animasi Mengetik Teks - Pernahkan kamu melihat disuatu website terdepat animasi seperti mengetik teks ? Contohnya seperti di website bisabos.com atau tepatnya di halaman Home. Apakah kamu tertarik membuat animasi atau efek mengetik teks di websitemu ? Nah di artikel ini kita akan sama-sama belajar bagaimana cara membuat animasi atau efek mengetik teks atau text typing animation  menggunakan CSS dan Javascript.
+
+Caranya sangat mudah sekali, silahkan ikuti saja mulai dari awal dan saya jamin setelah membaca dan mengikuti langkah-langkah pada artikel Cara Membuat Animasi Mengetik Teks Dengan CSS dan Javascript ini, kamu akan langsung bisa membuat animasi mengetik teks pada website atau projek kamu.
+
+Pendahuluan
+Untuk memulai latihan membuat efek animasi mengetik teks atau text typing animation, kita perlu menyiapkan kebutuhan-kebutuhan yang diperlukan terlebih dahulu. Apa saja yang dibutuhkan dalam percobaan ini ?
+
+Text Editor (Saya menggunakan Visual Code Studio)
+Browser (Saya menggunakan chrome)
+Ada beberapa opsi yang akan kita coba di artikel Membuat Animasi Mengetik Teks atau Text Typing Animation pada artikel ini, antara lain; menggunakan CSS, Javascript, Package dan lain-lain:
+
+Table of Contents
+Pendahuluan
+Membuat Animasi Mengetik Teks dengan CSS
+Membuat Animasi Mengetik Teks atau Text Typing Animation Menggunakan Javascript
+Kesimpulan
+Membuat Animasi Mengetik Teks dengan CSS
+Di opsi pertama ini, kita akan mencoba membuat animasi mengetik teks atau text typing animation menggunakan CSS. Pertama kita akan menyiapkan file html, buat file html misal typing.html kemudian masukkan atau copy kode di bawah ini dan paste di file typing.html yang baru saja dibuat.
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Text Typing Animation</title>
+        <style>
+            body
+            {
+            background:#007aff;
+            margin-top:200px;
+            margin-left:50px;
+            }
+            #typing {
+            width: 0ch;
+            color: white;
+            float: left;
+            font-family: sans-serif;
+            font-weight:bold;
+            font-size: 60px;
+            overflow: hidden;
+            white-space: nowrap;
+            animation: typing 5s steps(22) 1s infinite alternate;
+            }
+            #typing span{
+            color:#fb8c00;}
+            #line {
+            float: left;
+            color: white;
+            font-weight:bold;
+            font-size: 60px;
+            animation: crow 0.5s linear 0s infinite;
+            }
+            @keyframes typing {
+            from {
+            width: 0ch;
+            }
+            to {
+            width: 25ch;
+            }
+            }
+            @keyframes crow {
+            from {
+            opacity: 0;
+            }
+            to {
+            opacity: 1;
+            }
+            }
+        </style>
+    </head>
+    <body>
+        <div id="typing">Hello World, <span>Welcome to Bisabos.com</span></div>
+        <div id="line">|</div>
+    </body>
+</html>
